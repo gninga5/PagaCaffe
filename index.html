@@ -14,6 +14,8 @@
     
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
+    <script src="js/input-touchspin.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -101,260 +103,6 @@
             margin: 10px;
         }
 
-
-        .coffee-machine {
-            width: 300px;
-            height: 280px;
-            position: absolute;
-            top: calc(50% - 140px);
-            left: calc(50% - 150px);
-        }
-        .coffee-header {
-            width: 100%;
-            height: 80px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-color: #ddcfcc;
-            border-radius: 10px;
-        }
-        .coffee-header__buttons {
-            width: 25px;
-            height: 25px;
-            position: absolute;
-            top: 25px;
-            background-color: #282323;
-            border-radius: 50%;
-        }
-        .coffee-header__buttons::after {
-            content: "";
-            width: 8px;
-            height: 8px;
-            position: absolute;
-            bottom: -8px;
-            left: calc(50% - 4px);
-            background-color: #615e5e;
-        }
-        .coffee-header__button-one {left: 15px;}
-        .coffee-header__button-two {left: 50px;}
-        .coffee-header__display {
-            width: 50px;
-            height: 50px;
-            position: absolute;
-            top: calc(50% - 25px);
-            left: calc(50% - 25px);
-            border-radius: 50%;
-            background-color: #9acfc5;
-            border: 5px solid #43beae;
-            box-sizing: border-box;
-        }
-        .coffee-header__details {
-            width: 8px;
-            height: 20px;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: #9b9091;
-            box-shadow: -12px 0 0 #9b9091, -24px 0 0 #9b9091;
-        }
-        .coffee-medium {
-            width: 90%;
-            height: 160px;
-            position: absolute;
-            top: 80px;
-            left: calc(50% - 45%);
-            background-color: #bcb0af;
-        }
-        .coffee-medium:before {
-            content: "";
-            width: 90%;
-            height: 100px;
-            background-color: #776f6e;
-            position: absolute;
-            bottom: 0;
-            left: calc(50% - 45%);
-            border-radius: 20px 20px 0 0;
-        }
-        .coffe-medium__exit {
-            width: 60px;
-            height: 20px;
-            position: absolute;
-            top: 0;
-            left: calc(50% - 30px);
-            background-color: #231f20;
-        }
-        .coffe-medium__exit::before {
-            content: "";
-            width: 50px;
-            height: 20px;
-            border-radius: 0 0 50% 50%;
-            position: absolute;
-            bottom: -20px;
-            left: calc(50% - 25px);
-            background-color: #231f20;
-        }
-        .coffe-medium__exit::after {
-            content: "";
-            width: 10px;
-            height: 10px;
-            position: absolute;
-            bottom: -30px;
-            left: calc(50% - 5px);
-            background-color: #231f20;
-        }
-        .coffee-medium__arm {
-            width: 70px;
-            height: 20px;
-            position: absolute;
-            top: 15px;
-            right: 25px;
-            background-color: #231f20;
-        }
-        .coffee-medium__arm::before {
-            content: "";
-            width: 15px;
-            height: 5px;
-            position: absolute;
-            top: 7px;
-            left: -15px;
-            background-color: #9e9495;
-        }
-        .coffee-medium__cup {
-            width: 80px;
-            height: 47px;
-            position: absolute;
-            bottom: 0;
-            left: calc(50% - 40px);
-            background-color: #FFF;
-            border-radius: 0 0 70px 70px / 0 0 110px 110px;
-        }
-        .coffee-medium__cup::after {
-            content: "";
-            width: 20px;
-            height: 20px;
-            position: absolute;
-            top: 6px;
-            right: -13px;
-            border: 5px solid #FFF;
-            border-radius: 50%;
-        }
-        @keyframes liquid {
-            0% {
-                height: 0px;  
-                opacity: 1;
-            }
-            5% {
-                height: 0px;  
-                opacity: 1;
-            }
-            20% {
-                height: 62px;  
-                opacity: 1;
-            }
-            95% {
-                height: 62px;
-                opacity: 1;
-            }
-            100% {
-                height: 62px;
-                opacity: 0;
-            }
-        }
-        .coffee-medium__liquid {
-            width: 6px;
-            height: 63px;
-            opacity: 0;
-            position: absolute;
-            top: 50px;
-            left: calc(50% - 3px);
-            background-color: #74372b;
-            animation: liquid 4s 4s linear infinite;
-        }
-        .coffee-medium__smoke {
-            width: 8px;
-            height: 20px;
-            position: absolute;  
-            border-radius: 5px;
-            background-color: #b3aeae;
-        }
-        @keyframes smokeOne {
-            0% {
-                bottom: 20px;
-                opacity: 0;
-            }
-            40% {
-                bottom: 50px;
-                opacity: .5;
-            }
-            80% {
-                bottom: 80px;
-                opacity: .3;
-            }
-            100% {
-                bottom: 80px;
-                opacity: 0;
-            }
-        }
-        @keyframes smokeTwo {
-            0% {
-                bottom: 40px;
-                opacity: 0;
-            }
-            40% {
-                bottom: 70px;
-                opacity: .5;
-            }
-            80% {
-                bottom: 80px;
-                opacity: .3;
-            }
-            100% {
-                bottom: 80px;
-                opacity: 0;
-            }
-        }
-        .coffee-medium__smoke-one {
-            opacity: 0;
-            bottom: 50px;
-            left: 102px;
-            animation: smokeOne 3s 4s linear infinite;
-        }
-        .coffee-medium__smoke-two {
-            opacity: 0;
-            bottom: 70px;
-            left: 118px;
-            animation: smokeTwo 3s 5s linear infinite;
-        }
-        .coffee-medium__smoke-three {
-            opacity: 0;
-            bottom: 65px;
-            right: 118px;
-            animation: smokeTwo 3s 6s linear infinite;
-        }
-        .coffee-medium__smoke-for {
-            opacity: 0;
-            bottom: 50px;
-            right: 102px;
-            animation: smokeOne 3s 5s linear infinite;
-        }
-        .coffee-footer {
-            width: 95%;
-            height: 15px;
-            position: absolute;
-            bottom: 25px;
-            left: calc(50% - 47.5%);
-            background-color: #41bdad;
-            border-radius: 10px;
-        }
-        .coffee-footer::after {
-            content: "";
-            width: 106%;
-            height: 26px;
-            position: absolute;
-            bottom: -25px;
-            left: -8px;
-            background-color: #000;
-        }
         .iconaSwal{
             border-color: #a0694e !important;
             color: #8F5D44 !important;
@@ -392,8 +140,6 @@
             color: #8F5D44 !important;
             font-family: 'Love Coffee', sans-serif !important;
         }
-
-        
         input[type=range] {
             -webkit-appearance: none;
             margin: 10px 0;
@@ -482,31 +228,36 @@
         input[type=range]:focus::-ms-fill-upper {
             background: #b56a43;
         }
+        .divContainerGame{
+            flex-direction: column;
+        }
+        .divNumber{
+            width: 145px;
+            margin: auto;
+            padding-block: 1.5rem;
+            padding-inline: 3rem;
+            border-radius: 16px;
+            background: #8F5D44;
+            text-align: center;
+            color: white;
+            font-size: 1.4em;
+            font-family: 'Love Coffee', sans-serif;
+            font-style: italic;
+        }
+        .btnPiuMeno{
+            position: relative;
+            color: white;
+            border-radius: 50rem;
+            background-color: chocolate;
+            border: none;
+            box-shadow: 5px 5px 10px rgba(55,94,148,.2), -5px -5px 10px rgba(255,255,255,.4);
+            transition: background-color .15s ease-in-out,border .15s ease-in-out,box-shadow .15s ease-in-out,color .15s ease-in-out;
+        }
     </style>
 </head>
 <body>
   <div id="Conta">
     <h1 id="Titolo">Chi paga?</h1>
-
-    <div class="coffee-machine">
-        <div class="coffee-header">
-          <div class="coffee-header__buttons coffee-header__button-one"></div>
-          <div class="coffee-header__buttons coffee-header__button-two"></div>
-          <div class="coffee-header__display"></div>
-          <div class="coffee-header__details"></div>
-        </div>
-        <div class="coffee-medium">
-          <div class="coffe-medium__exit"></div>
-          <div class="coffee-medium__arm"></div>
-          <div class="coffee-medium__liquid"></div>
-          <div class="coffee-medium__smoke coffee-medium__smoke-one"></div>
-          <div class="coffee-medium__smoke coffee-medium__smoke-two"></div>
-          <div class="coffee-medium__smoke coffee-medium__smoke-three"></div>
-          <div class="coffee-medium__smoke coffee-medium__smoke-for"></div>
-          <div class="coffee-medium__cup"></div>
-        </div>
-        <div class="coffee-footer"></div>
-    </div>
 
     <div id="setup">
       <p>Inserisci un numero di giocatori e il massimo numero da indovinare:</p>
@@ -531,81 +282,37 @@
 
 
   <script>
-    let nMaxDaIndovinare;   // Numero max da indovinare
-    let nGiocatori;         // Numero dei giocatori
-    let nTarget;            // Numero da indovinare scelto dal sistema
+    var nMaxDaIndovinare = 500;   // Numero max da indovinare
+    var nGiocatori = 3;           // Numero dei giocatori
+    var nTarget;                  // Numero da indovinare scelto dal sistema
+    var nMin;                     // Numero minimo
+    var nMax;                     // Numero massimo
+    var nSel;                     // Numero scelto dall'utente
+    
 
-    Swal.fire({
-        allowOutsideClick: false,
-        allowEscapeKey: false,
-        title: "<img src='ico/logo.png' style='width:150px;' class='animate__animated animate__pulse animate__infinite animate__delay-1s' alt='Scegliere il numero max da indovinare'>",
-        // icon: "question",
-        input: "range",
-        inputLabel: "Scegliere il numero max da indovinare",
-        inputAttributes: {
-            id: 'nMax_Range',
-            min: "10",
-            max: "1000",
-            step: "1",
-        },
-        inputValue: 500,
-        validationMessage: 'Il numero min è 10 e max 1000',
-        inputPlaceholder: 'min 10 - max 1000',
-        preConfirm: () => {
-            nMaxDaIndovinare = parseInt(Swal.getInput().value);
-            console.log("N° max da indovinare: "+nMaxDaIndovinare);
-        },
-        width: 600,
-        customClass: {
-            icon: 'iconaSwal',
-            inputLabel: 'titoloSwal',
-            input: 'rangeSwal',
-        },
-        confirmButtonText: `Avanti <i class="fa-solid fa-circle-chevron-right"></i>`,
-        confirmButtonColor: "#8F5D44",
-        showClass: {
-            popup: `
-            animate__animated
-            animate__fadeInUp
-            animate__faster
-            `
-        },
-        hideClass: {
-            popup: `
-            animate__animated
-            animate__fadeOutDown
-            animate__faster
-            `
-        },
-        padding: "3em",
-        color: "#716add",
-        background: "url(pattern3.jpg)",
-        backdrop: `
-            rgba(0,0,123,0.4)
-            url("pattern1.jpg")
-            
-            repeat
-        `
-    }).then(function() {
+    $(document).ready(function() {
+        Swal_daIndovinare();
+    })
+
+    function Swal_daIndovinare(){
         Swal.fire({
             allowOutsideClick: false,
             allowEscapeKey: false,
-            title: "<img src='ico/logo.png' style='width:150px;' class='animate__animated animate__pulse animate__infinite animate__delay-1s' alt='Scegliere il numero dei giocatori'>",
+            title: "<img src='ico/logo.png' style='width:150px;' class='animate__animated animate__pulse animate__infinite animate__delay-1s' alt='Scegliere il numero max da indovinare'>",
             // icon: "question",
             input: "range",
-            inputLabel: "Scegliere il numero di partecipanti",
+            inputLabel: "Scegliere il numero max da indovinare",
             inputAttributes: {
-                id: 'nPlayers_Range',
-                min: "2",
+                id: 'nMax_Range',
+                min: "10",
                 max: "1000",
-                step: "1"
+                step: "1",
             },
-            inputValue: 3,
-            validationMessage: 'Il numero min è 2 e max 1000',
-            inputPlaceholder: 'min 2 - max 1000',
+            inputValue: nMaxDaIndovinare,
+            validationMessage: 'Il numero min è 10 e max 1000',
+            inputPlaceholder: 'min 10 - max 1000',
             preConfirm: () => {
-                nGiocatori = parseInt(Swal.getInput().value);
-                console.log("N° giocatori: "+nGiocatori);
+                nMaxDaIndovinare = parseInt(Swal.getInput().value);
             },
             width: 600,
             customClass: {
@@ -638,179 +345,252 @@
                 
                 repeat
             `
+        }).then((result) => {
+           if (result.isConfirmed) {
+              Swal_Giocatori();
+           }
         })
-    })
-
-    // const nPlayers = 2;
-    // const nPlayersStep = 1;
-
-    // $(document).ready(function(){
-    //     Swal.fire({
-    //         title: "Quanti sono i giocatori?",
-    //         html: "<input type='number' value="+nPlayers+" step="+nPlayersStep+" class='swal2-input' id='nGiocatori-value'>",
-    //         input: 'range',
-    //         nPlayers,
-    //         inputAttributes: {
-    //             min: '2',
-    //             max: '1000',
-    //             step: nPlayersStep.toString(),
-    //         },
-    //         didOpen: () => {
-    //             const nPlayersRange = Swal.getInput();
-    //             const nPlayersSet = Swal.getPopup().querySelector('#nGiocatori-value').value;
-    //             // remove default output
-    //             Swal.getPopup().querySelector('output').style.display = 'none';
-    //             nPlayersRange.style.width = '100%'
-
-    //             // sync input[type=number] with input[type=range]
-    //             nPlayersRange.addEventListener('input', () => {
-    //                 nPlayersSet.value = nPlayersRange.value
-    //             })
-        
-    //             // sync input[type=range] with input[type=number]
-    //             nPlayersSet.addEventListener('change', () => {
-    //                 nPlayersRange.value = nPlayersSet.value;
-    //                 //alert(inputRange.value);
-    //             })
-    //         },
-    //         width: 600,
-    //         customClass: {
-    //             popup: 'sfondo',
-    //             htmlContainer: 'sfondo',
-    //             image: 'sfondo',
-    //         },
-    //         showClass: {
-    //             popup: `
-    //             animate__animated
-    //             animate__fadeInUp
-    //             animate__faster
-    //             `
-    //         },
-    //         hideClass: {
-    //             popup: `
-    //             animate__animated
-    //             animate__fadeOutDown
-    //             animate__faster
-    //             `
-    //         },
-    //         padding: "3em",
-    //         color: "#716add",
-    //         background: "url(pattern3.jpg)",
-    //         backdrop: `
-    //             rgba(0,0,123,0.4)
-    //             url("pattern1.jpg")
+    }
+    
+    function Swal_Giocatori(){
+        Swal.fire({
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+            title: "<img src='ico/logo.png' style='width:150px;' class='animate__animated animate__pulse animate__infinite animate__delay-1s' alt='Scegliere il numero dei giocatori'>",
+            input: "range",
+            inputLabel: "Scegliere il numero di partecipanti",
+            inputAttributes: {
+                id: 'nPlayers_Range',
+                min: "2",
+                max: "1000",
+                step: "1"
+            },
+            inputValue: nGiocatori,
+            validationMessage: 'Il numero min è 2 e max 1000',
+            inputPlaceholder: 'min 2 - max 1000',
+            preDeny: () => {
+                nGiocatori = parseInt(Swal.getInput().value);
+            },
+            width: 600,
+            customClass: {
+                icon: 'iconaSwal',
+                inputLabel: 'titoloSwal',
+                input: 'rangeSwal',
+            },
+            showDenyButton: true,
+            denyButtonColor: "#8F5D44",
+            denyButtonText: `Avanti <i class="fa-solid fa-circle-chevron-right"></i>`,
+            confirmButtonText: `<i class="fa-solid fa-circle-chevron-left"></i> Indietro`,
+            confirmButtonColor: "#8F5D44",
+            showClass: {
+                popup: `
+                animate__animated
+                animate__fadeInUp
+                animate__faster
+                `
+            },
+            hideClass: {
+                popup: `
+                animate__animated
+                animate__fadeOutDown
+                animate__faster
+                `
+            },
+            padding: "3em",
+            color: "#716add",
+            background: "url(pattern3.jpg)",
+            backdrop: `
+                rgba(0,0,123,0.4)
+                url("pattern1.jpg")
                 
-    //             repeat
-    //         `
-    //     });
-    // })
+                repeat
+            `
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal_daIndovinare();
+            }
+            else if (result.isDenied) {
+                nTarget = Math.floor(Math.random() * nMaxDaIndovinare);
+                Swal_Game();
+            }
+        })
+    }
 
-    // Get the HTML elements
-    var setup = document.getElementById("setup");
-    var game = document.getElementById("game");
-    var playersInput = document.getElementById("players");
-    var maxInput = document.getElementById("max");
-    var startButton = document.getElementById("start");
-    var error = document.getElementById("error");
-    var maxValue = document.getElementById("max-value");
-    var playerName = document.getElementById("player-name");
-    var guessInput = document.getElementById("guess");
-    var submitButton = document.getElementById("submit");
-    var message = document.getElementById("message");
+    // Imposto il numero minimo e massimo tra 0 e il nMaxDaIndovinare
+    nMin = 0;
+    nMax = nMaxDaIndovinare;
+    nSel = 1;
 
-    var players; // The number of players
-    var max; // The maximum number to guess
-    var target; // The number chosen by the system
-    var turn; // The current player's turn
-    var lower; // The lower bound of the guess range
-    var upper; // The upper bound of the guess range
-    var names; // The array of player names
-
-    // Add an event listener to the start button
-    startButton.addEventListener("click", function() {
-      // Get the input values
-      players = parseInt(playersInput.value);
-      max = parseInt(maxInput.value);
-
-      // Validate the input values
-      if (isNaN(players) || isNaN(max) || players < 2 || players > 10 || max < 10 || max > 1000) {
-        // Show an error message
-        error.textContent = "Input non valido. Inserisci un numero valido!";
-      } else {
-        // Hide the error message
-        error.textContent = "";
-
-        // Choose a random number between 0 and max
-        target = Math.floor(Math.random() * (max + 1));
-
-        // Set the initial turn to 1
-        turn = 1;
-
-        // Set the initial lower and upper bounds to 0 and max
-        lower = 0;
-        upper = max;
-
-        // Generate some random names for the players
-        names = ["Antonio", "Francesco", "Simone", "Rosa", "Federica", "Agostino", "Roberta", "Milena", "Miriana", "Pietro"];
-        names = names.slice(0, players); // Take only the first players names
-        names.sort(function() { return 0.5 - Math.random(); }); // Shuffle the names
-
-        // Show the game div and hide the setup div
-        game.style.display = "block";
-        setup.style.display = "none";
-
-        // Show the max value and the player name
-        maxValue.textContent = max;
-        playerName.textContent = names[turn - 1];
-
-        // Clear the guess input and the message
-        guessInput.value = "";
-        message.textContent = "";
-      }
-    });
-
-    // Add an event listener to the submit button
-    submitButton.addEventListener("click", function() {
-      // Get the guess value
-      var guess = parseInt(guessInput.value);
-
-      // Validate the guess value
-      if (isNaN(guess) || guess < lower || guess > upper) {
-        // Show an error message
-        message.textContent = "Inserisci un numero tra " + lower + " e " + upper + "!";
-      } else {
-        // Clear the error message
-        message.textContent = "";
-
-        // Check if the guess is correct
-        if (guess == target) {
-          // Show a success message
-          message.textContent = "Vince (anzi perde), " + names[turn - 1] + "! Deve pagare "+playersInput.value+" caffè!!";
-
-          // Disable the guess input and the submit button
-          guessInput.disabled = true;
-          submitButton.disabled = true;
-        } else {
-          // Show a hint message
-          if (guess < target) {
-            message.textContent = "Troppo basso. Prova con un numero più alto!";
-            lower = guess + 1; // Update the lower bound
-          } else {
-            message.textContent = "Troppo alto. Prova con un numero più basso!";
-            upper = guess - 1; // Update the upper bound
-          }
-
-          // Increment the turn and wrap around if necessary
-          turn = (turn % players) + 1;
-
-          // Show the next player name
-          playerName.textContent = names[turn - 1];
-
-          // Clear the guess input
-          guessInput.value = "";
+    function numSel(){
+        var nSelected = document.getElementById("nSelected").value;
+        if (!nSelected){
+            alert("Devi inserire un numero!"); 
+            document.getElementById("nSelected").value = nMin+1;
+        } else
+        if (nSelected < 0){
+            alert("Inserire un numero valido!"); 
+            document.getElementById("nSelected").value = nMin+1;
+        } else
+        if (nSelected > nMaxDaIndovinare) {
+            alert("Inserire un numero compreso tra "+nMin+" e "+nMaxDaIndovinare); 
+            document.getElementById("nSelected").value = nMin+1;
         }
-      }
-    });
+    }
+
+    function Swal_Game(){
+        Swal.fire({
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+            title: "<img src='ico/logo.png' style='width:150px;' class='animate__animated animate__pulse animate__infinite animate__delay-1s' alt='Scegliere un numero tra min e max'>",
+            html: "<div id='divContainerGame' class='divContainerGame mt-5 d-flex'>"+
+                        "<div id='divMin' class='divNumber mb-3'>"+nMin+"</div>"+
+                        "<div id='divSel' class='divNumber my-3' style='padding-block: .5em; padding-inline: 0; width: 240px;'>"+
+                            // "<label for=\"numSelezionato\" class=\"form-label nSelected\">"+nSel+"</label>"+
+                            // "<input style=\"margin: 0;\" type=\"range\" class=\"form-range\" min=\""+(nMin+1)+"\" max=\""+(nMax-1)+"\" step=\"1\" value=\""+nSel+"\" id=\"numSelezionato\" onchange=\"rangeSel()\">"+
+                            "<div class=\"touchspin d-flex align-items-center\" style=\"max-width: 300px; margin-inline: 2rem;\" onfocusout=\"numSel()\">"+
+                                "<button class=\"btnPiuMeno btn-secondary\" type=\"button\" data-touchspin-down=\"\">-</button>"+
+                                "<input id=\"nSelected\" type=\"number\" min=\""+(nMin+1)+"\" max=\""+(nMaxDaIndovinare-1)+"\" value=\""+nSel+"\" class=\"form-control text-center\" data-touchspin-input=\"\">"+
+                                "<button class=\"btnPiuMeno btn-secondary\" type=\"button\" data-touchspin-up=\"\">+</button>"+
+                            "</div>"+
+                        "</div>"+
+                        "<div id='divMax' class='divNumber mt-3'>"+nMaxDaIndovinare+"</div>"+
+                   "</div>",
+            didOpen: () => {new InputTouchspin(document.querySelector('.touchspin'))},
+            width: 600,
+            customClass: {
+                icon: 'iconaSwal',
+                inputLabel: 'titoloSwal',
+                input: 'rangeSwal',
+            },
+            confirmButtonText: `Controlla`,
+            confirmButtonColor: "#8F5D44",
+            showClass: {
+                popup: `
+                animate__animated
+                animate__fadeInUp
+                animate__faster
+                `
+            },
+            hideClass: {
+                popup: `
+                animate__animated
+                animate__fadeOutDown
+                animate__faster
+                `
+            },
+            padding: "3em",
+            color: "#716add",
+            background: "url(pattern3.jpg)",
+            backdrop: `
+                rgba(0,0,123,0.4)
+                url("pattern1.jpg")
+                repeat
+            `,
+            preConfirm: () => {
+                var nSelected = parseInt(document.getElementById("nSelected").value);
+                numSel();
+                if(nSelected == nTarget){
+                    Swal.fire({
+                        allowOutsideClick: false,
+                        allowEscapeKey: false,
+                        customClass: {
+                            title: 'titoloSwal',
+                        },
+                        showClass: {
+                            popup: `
+                            animate__animated
+                            animate__fadeInUp
+                            animate__faster
+                            `
+                        },
+                        hideClass: {
+                            popup: `
+                            animate__animated
+                            animate__fadeOutDown
+                            animate__faster
+                            `
+                        },
+                        padding: "3em",
+                        color: "#716add",
+                        background: "url(pattern3.jpg)",
+                        backdrop: `
+                            rgba(0,0,123,0.4)
+                            url("pattern1.jpg")
+                            repeat
+                        `,
+                        icon: 'success',
+                        title: "Hai vinto - anzi perso! Devi pagare "+nGiocatori+" caffè!!",
+                        confirmButtonText: `Ricomincia <i class="fa-solid fa-repeat"></i>`,
+                        confirmButtonColor: "#8F5D44",
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            // Ripristino le variabili e ricomincia il gioco
+                            nMin = 0;
+                            nMax = 1000;
+                            nMaxDaIndovinare = 1000;
+                            nTarget = 0;
+                            nSel = 1;
+                            Swal_daIndovinare();
+                        }
+                    })
+                }
+                if(nSelected > nTarget){
+                    nMax = nSelected;
+                    document.getElementById("nSelected").setAttribute("max",nSelected-1); 
+                    document.getElementById("divMax").innerHTML = nMax;
+                    document.getElementById("nSelected").value = nSelected-1;
+                }
+                if(nSelected < nTarget){
+                    nMax = nSelected;
+                    document.getElementById("nSelected").setAttribute("min",nSelected+1); 
+                    document.getElementById("divMin").innerHTML = nSelected;
+                    document.getElementById("nSelected").value = nSelected+1;
+                }
+                return false;
+            }
+        })
+    }
+    
+    // var turn; // The current player's turn
+    
+    // // Add an event listener to the start button
+    // startButton.addEventListener("click", function() {
+    
+
+    //   // Validate the input values
+    //   if (isNaN(players) || isNaN(max) || players < 2 || players > 10 || max < 10 || max > 1000) {
+    //     .....
+    //   } else {
+    //     ..... 
+
+    //     // Set the initial turn to 1
+    //     turn = 1;
+
+    //     // Generate some random names for the players
+    //     names = ["Antonio", "Francesco", "Simone", "Rosa", "Federica", "Agostino", "Roberta", "Milena", "Miriana", "Pietro"];
+    //     names = names.slice(0, players); // Take only the first players names
+    //     names.sort(function() { return 0.5 - Math.random(); }); // Shuffle the names
+    // });
+
+    // // Add an event listener to the submit button
+    // submitButton.addEventListener("click", function() {
+    
+    //   if (isNaN(guess) || guess < lower || guess > upper) {
+    //     // ..... 
+    //   } else {
+    //     // Check if the guess is correct
+    //     if (guess == target) {
+    //       .......
+    //     } else {
+    //       .....
+    //       // Increment the turn and wrap around if necessary
+    //       turn = (turn % players) + 1;
+
+    //       // Show the next player name
+    //       playerName.textContent = names[turn - 1];
+    //     }
+    //   }
+    // });
   </script>
 </body>
 </html>
